@@ -1,0 +1,31 @@
+// variables
+@black: #000;
+@darkGray: #444444;
+@lightGray: #ececec;
+@white: #fff;
+@mentholColor: #63d1bb;
+@mintGreenColor: #56c3b2;
+
+
+@openSans: "OpenSans", Arial, sans-serif; 
+// Mixins
+
+.font(@family: @verdana; @size:14px; @height:30px ; @weight:400; @color: @nav-color){
+  font-family: @family;
+  font-size: @size;
+  line-height: @height;
+  font-weight: @weight;
+  color: @color;
+}
+
+.alignment {
+  margin: 0 auto;
+}
+
+.headerText {
+  .font(@openSans; 24px; 30px; 700; @black);
+}
+
+.paragraphText {
+  .font(@openSans; 14px; 30px; 400; @darkGray);
+}

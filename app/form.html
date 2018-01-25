@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Form</title>
+</head>
+<body>
+  <header class="header">
+    <nav class="main-nav">
+      <div class="main-nav__logo">
+        <a href="index.html"></a>
+        <button class="main-nav__btn"></button>
+      </div>
+      <div class="main-nav__catalog">
+        <a href="catalog.html">Каталог товаров</a>
+      </div>
+      <div class="main-nav__knitting">
+        <a href="form.html">Вязание на заказ</a>
+      </div>
+      <div class="main-nav__search">
+        <a href="#">Поиск по сайту</a>
+      </div>
+      <div class="main-nav__cart">
+        <a href="#">Корзина</a> <!-- : пока пуста -->
+      </div>
+    </nav>   
+  </header>
+  <main>
+    <div class="page-header">
+      <h1>Вязание на заказ</h1>
+      <p>
+        Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали.
+      </p>
+    </div>
+    <form action="" method="post" class="order-product">
+      <div class="order-product__type">
+        <h2>Тип</h2>
+        <label for="">Аксессуар для интерьера</label>
+        <input type="radio">
+        <label for="">Детская игрушка</label>
+        <input type="radio">
+      </div>
+      <div class="order-product__color">
+        <h2>Цвет</h2>
+        <label for="">Белый</label>
+        <input type="checkbox">
+        <label for="">Серый</label>
+        <input type="checkbox">
+        <label for="">«Тиффани»</label>
+        <input type="checkbox">
+        <label for="">Черный</label>
+        <input type="checkbox">
+        <label for="">Розовый</label>
+        <input type="checkbox">
+        <label for="">Оранжевый</label>
+        <input type="checkbox">
+      </div>
+      <div class="order-product__user-name">
+        <h2>Фио</h2>
+        <label for="">Фамилия:</label>
+        <input type="text">
+        <label for="">Имя</label>
+        <input type="text">
+        <label for="">Отчество</label>
+        <input type="text">
+      </div>
+      <div class="order-product__user-phone-email">
+        <h2>Тел</h2>
+        <input type="tel">
+        <h2>E-mail</h2>
+        <input type="email">
+      </div>
+      <div class="order-product__user-comment">
+        <h2>Доп</h2>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+      </div>
+      <button class="btn" type="submit">
+        Отправить заказ
+      </button>
+    </form>
+  </main>
+  <footer class="footer">
+    <div class="footer__logo"></div>
+    <div class="footer__links">
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#"></a>
+    </div>
+    <div class="footer__developed">
+      <p>Разработано</p>
+    </div>
+  </footer>
+</body>
+</html>

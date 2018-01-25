@@ -1,0 +1,66 @@
+.week-product {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+
+  &__header {
+    width: 260px;
+    padding-top: 27px;
+    .alignment;
+    margin-bottom: 24px;  
+
+    & h2 {
+      .headerText;
+      margin: 0;
+      margin-bottom: 8px;
+    }
+
+    & span {
+      .font(@openSans; 16px; 16px; 700; @mentholColor);
+      text-transform: uppercase;
+    }
+  }
+
+  &__description {
+    .font(@openSans; 14px; 24px; 400; @darkGray);
+    width: 260px;
+    .alignment;
+    margin-bottom: 18px;
+  }
+
+  &__details {
+    .font(@openSans; 14px; 20px; 400; @darkGray);
+    width: 260px;
+    .alignment;
+    margin-bottom: 25px;
+
+    & td {
+      padding: 8px 0;
+      border-bottom: 1px solid @lightGray;
+
+      &:nth-child(2) {
+        padding-left: 15px;
+      }
+    }
+  }
+
+  &__img {
+    width: 260px;
+    height: 315px;
+    .alignment;
+    margin-bottom: 25px;
+
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__price {
+    .font(@openSans; 16px; 24px; 700; @black);
+    text-align: center;
+    width: 260px;
+    .alignment;
+    margin-bottom: 25px;
+  }
+}

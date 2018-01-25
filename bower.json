@@ -1,0 +1,19 @@
+{
+  "name": "Mishka",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Jess"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/DmitriyErtsenek/Mishka",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {}
+}

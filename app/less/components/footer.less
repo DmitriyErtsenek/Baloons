@@ -1,0 +1,31 @@
+.footer {
+  background-color: @lightGray;
+  margin-top: 40px;
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 145px;
+    .alignment;
+    padding: 25px 0;
+  }
+
+  &__developed {
+    .font(@openSans; 18px; 18px; 700; @black);
+    display: flex;
+    width: 260px;
+    .alignment;
+    padding: 10px 0;
+    padding-bottom: 14px;
+    
+    &-logo {
+      padding-top: 12px;
+    }
+
+    & p {
+      margin-left: 40px;
+      margin-right: 26px;
+    }
+  }
+}

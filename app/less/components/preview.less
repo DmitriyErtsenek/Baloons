@@ -1,0 +1,28 @@
+.preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: url('../../img/hero-mobile@1x.jpg') 50% 0 no-repeat;
+  min-height: 506px; 
+  
+  &__nav {
+    display: flex;
+    flex-direction: column;
+
+    &-btn {
+      .font(@openSans; 18px; 24px; 700; @black);
+      text-decoration: none;
+      color: @white;
+      padding: 26px 190px 29px 29px;
+
+      &--interior {
+        background-color: @mentholColor;
+      }
+
+      &--toys {
+        background-color: @mintGreenColor;
+      }
+    }
+  }
+}

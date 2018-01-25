@@ -1,0 +1,49 @@
+.main-nav {
+  
+  &__logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 78px;
+    border-bottom: 1px solid @lightGray;
+
+    &-image {
+      width: 86px;
+      height: 35px;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 13%;
+    top: 25px;
+    width: 20px;
+    height: 14px;
+    background-color: transparent;
+    border: none;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 2px;
+      background-color: @black;
+      box-shadow: 0 6px 0 @black, 0 12px 0 @black;
+    }
+  }
+
+  &__li {
+    display: flex;  
+    border-bottom: 1px solid @lightGray;
+
+    & a {
+      .font(@openSans; 16px; 24px; 700; @black);
+      text-decoration: none;
+      width: 100%;
+      text-align: center;
+      padding: 27px 0;  
+    }    
+  }
+}
+
