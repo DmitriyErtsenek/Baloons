@@ -1,0 +1,38 @@
+.product {
+  margin-bottom: 30px;
+
+  &__img {
+    width: 259px;
+    height: 195px;
+  }
+  
+  &__card {
+    border: 1px solid @lightGray;
+    padding: 28px;
+  }
+
+  &__description {
+    margin-bottom: 15px;
+
+    & h3 {
+      .productNameText;
+      margin:  0;
+      margin-bottom: 5px;
+    }
+
+    & span {
+      .paragraphText;
+    }
+  }
+
+  &__price {
+    .alignment;
+    width: 200px;
+    border-top: 1px solid @lightGray;
+    padding-top: 20px;
+
+    & span {
+      .productPriceText;
+    }
+  }
+}
