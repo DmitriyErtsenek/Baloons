@@ -2,4 +2,29 @@
   background: url('../../img/pattern.svg');
   height: 6px;
   margin-bottom: 30px;
+
+  &--tablet {
+    display: none;
+  }
+}
+
+
+
+@media @tablet-width {
+  .pattern {
+    height: 17px;
+    opacity: 0.5;
+
+    &--tablet {
+      display: flex;
+      position: relative;
+      height: 26px;
+      top: -15px;
+      margin-bottom: 0px;
+      background-image: url('../../img/pattern2.svg');
+      background-size: 40px 31px ;
+      background-position: 24px 0;
+      opacity: 1;
+    }
+  }
 }

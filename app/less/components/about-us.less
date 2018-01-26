@@ -46,3 +46,57 @@
     }
   }
 }
+
+@media @tablet-width {
+  .about-us {
+    width: 670px;
+    .alignment;
+    padding-top: 20px;
+
+    &__header {
+      .headerTabletText;
+      width: 330px;
+      margin: 0;
+      margin-right: auto;
+      margin-bottom: 40px;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    &__achievement {
+      .font(@openSans; 20px; 25px; 700; @black);
+      width: 330px;
+      margin-bottom: 45px;
+    
+      &--ach1 {
+      order: 1;
+      }
+
+      &--ach2 {
+        order: 3;
+      }
+
+      &--ach3 {
+        order: 5;
+      }
+
+      &--ach4 {
+        order: 2;
+      }
+
+      &--ach5 {
+        order: 4;
+      }
+
+      &--ach6 {
+        order: 6;
+      }
+    }    
+  }
+}

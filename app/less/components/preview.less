@@ -4,16 +4,24 @@
   justify-content: space-between;
   box-sizing: border-box;
   background: url('../../img/hero-mobile@1x.jpg') 50% 0 no-repeat;
+  background-size: 573px 373px;
+  background-color: @creamColor;
   min-height: 506px; 
+
+  @media @retina2x {
+    background-image: url('../../img/hero-mobile@2x.jpg');
+  }
   
   &__nav {
     display: flex;
     flex-direction: column;
+    width: 320px;
+    .alignment;
+
 
     &-btn {
-      .font(@openSans; 18px; 24px; 700; @black);
+      .font(@openSans; 18px; 24px; 700; @white);
       text-decoration: none;
-      color: @white;
       padding: 26px 190px 29px 29px;
 
       &--interior {
@@ -22,6 +30,31 @@
 
       &--toys {
         background-color: @mintGreenColor;
+      }
+    }
+  }
+}
+
+@media @tablet-width {
+  .preview {
+    min-height: 745px;
+    margin-top: -63px;
+    background: url('../../img/hero-desktop@1x.jpg') 50% 0 no-repeat;
+    background-size: 1150px 746px;
+
+    @media @retina2x {
+      background-image: url('../../img/hero-desktop@2x.jpg');
+    }
+  
+    &__nav {
+      flex-direction: row;
+      width: 670px;
+      height: 118px;
+      .alignment;
+
+      &-btn {
+        .font(@openSans; 20px; 30px; 700; @white);
+        padding-left: 35px;
       }
     }
   }

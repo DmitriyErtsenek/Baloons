@@ -8,10 +8,18 @@
     min-height: 78px;
     border-bottom: 1px solid @lightGray;
 
+    &-tablet {
+      display: none;
+    }
+
     &-image {
       width: 86px;
       height: 35px;
     }
+  }
+  
+  &__shipping {
+    display: none;
   }
 
   &__btn {
@@ -44,6 +52,93 @@
       text-align: center;
       padding: 27px 0;  
     }    
+  }
+}
+
+@media @tablet-width {
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__logo {
+      display: none;
+    }
+
+    &__logo-tablet {
+      order: 1;
+      display: flex;
+      flex-grow: 3;
+      box-sizing: border-box;
+      width: 370px;
+      height: 89px;
+      padding: 22px 50px;
+      padding-left: 7vw;
+      border-bottom: 1px solid @lightGray;
+      border-right: 1px solid @lightGray;
+    }
+  
+    &__search {
+      order: 2;
+      box-sizing: border-box;
+      text-indent: -9999px;
+      width: 83px;
+      height: 89px;
+      border-bottom: 1px solid @lightGray;
+    }
+  
+    &__cart {
+      display: flex;
+      order: 3;
+      flex-grow: 1;
+      box-sizing: border-box;
+      min-width: 315px;
+      height: 89px;
+      border-bottom: 1px solid @lightGray;
+      border-left: 1px solid @lightGray;
+
+      & a {
+        text-align: right;
+        padding-right: 7vw;
+      }
+    }
+    
+    &__kt-ct-wrap {
+      order: 4;
+      display: flex;
+    }
+
+    &__catalog {
+      width: 160px;
+      margin-left: 6vw;
+      border-bottom: none;
+      height: 63px;
+      align-items: center;
+      & a {
+        padding: 0;
+      }
+    }
+
+    &__knitting {
+      width: 170px;
+      border-bottom: none;
+      height: 63px;
+      align-items: center;
+      & a {
+        padding: 0;
+      }
+    }
+
+    &__shipping {
+      order: 5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: auto;
+      margin-right: 1vw;
+      .paragraphText;
+      line-height: 24px;
+      width: 315px;
+    }
   }
 }
 

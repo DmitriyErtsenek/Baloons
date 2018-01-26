@@ -1,14 +1,31 @@
 .footer {
   background-color: @lightGray;
   margin-top: 40px;
+  
+  &__logo {
+    display: none;
+  }
 
   &__links {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     width: 145px;
     .alignment;
     padding: 25px 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 260px;
+      height: 1px;
+      top: 80px;
+      left: 50%;
+      margin-left: -130px;
+      opacity: 0.1;
+      background-color: @darkGray;
+    }
   }
 
   &__developed {
@@ -26,6 +43,37 @@
     & p {
       margin-left: 40px;
       margin-right: 26px;
+    }
+  }
+}
+
+@media @tablet-width {
+  .footer {
+    
+    &__wrap {
+      display: flex;
+      align-items: center;
+      height: 143px;
+      width: 670px;
+      .alignment;
+    }
+
+    &__logo {
+      display: flex;
+      height: 55px;
+    }
+  
+    &__links {
+      height: 55px;
+      margin: 0;
+      margin-left: 160px;
+    }
+
+    &__developed {
+      height: 55px;
+      width: 220px;
+      margin: 0px;
+      margin-left: auto;
     }
   }
 }
