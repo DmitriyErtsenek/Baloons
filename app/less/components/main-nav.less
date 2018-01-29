@@ -1,5 +1,10 @@
 .main-nav {
   
+  &__new,
+  &__sale {
+    display: none;
+  }
+
   &__logo {
     position: relative;
     display: flex;
@@ -7,7 +12,8 @@
     align-items: center;
     min-height: 78px;
     border-bottom: 1px solid @lightGray;
-
+    
+    &-desktop,
     &-tablet {
       display: none;
     }
@@ -60,6 +66,7 @@
     display: flex;
     flex-wrap: wrap;
 
+    &__desktop,
     &__logo {
       display: none;
     }
@@ -138,6 +145,95 @@
       .paragraphText;
       line-height: 24px;
       width: 315px;
+    }
+  }
+}
+
+@media @desktop-width {
+  .main-nav {
+    &__logo,
+    &__logo-tablet {
+      display: none;
+    }
+
+    &__logo-desktop {
+      order: 2;
+      display: flex;
+      align-items: center;
+      padding-right: 85px;
+      border-bottom: 1px solid @lightGray;
+
+      & a {
+        margin-top: 10px;
+      }
+    }
+
+    &__kt-ct-wrap {
+      order: 1;
+      display: flex;
+      box-sizing: border-box;
+      align-items: center;
+      border-bottom: 1px solid @lightGray;
+    }
+
+    &__knitting {
+      padding: 13px 67px 13px 36px;
+      border-left: 1px solid @lightGray;
+    }
+
+    &__catalog {
+      margin: 0;
+      padding: 13px 40px 13px 40px;
+    }
+
+    &__search {
+      order: 3;
+      box-sizing: content-box;
+      border-left: 1px solid @lightGray; 
+    }
+
+    &__cart {
+      order: 4;
+      flex-grow: 0;
+      box-sizing: content-box;
+      min-width: 310px;
+
+      & a {
+        padding-right: 55px;        
+      }
+    }
+
+    &__shipping {
+      order: 7;
+      margin-right: 7px;
+    }
+
+    &__new {
+      order: 5;
+      display: flex;
+      margin-left: 30px;
+      margin-right: 56px;
+
+      & a {
+        .font(@openSans; 14px; 24px; 700; @black);
+        text-decoration: none;
+        width: 100%;
+        text-align: center;
+        padding: 20px 15px 0 20px;
+      }
+    }
+
+    &__sale {
+      order: 6;
+      display: flex;
+
+      & a {
+        .font(@openSans; 14px; 24px; 700; @black);
+        text-decoration: none;
+        width: 100%;
+        text-align: center;
+        padding: 20px 15px 0 20px;
+      }
     }
   }
 }
