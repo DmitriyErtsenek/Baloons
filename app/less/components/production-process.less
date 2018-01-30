@@ -6,21 +6,123 @@
 
   &__header {
     .productNameText;
+    position: relative;
     margin: 0;
     padding: 25px 34px;
-    padding-left: 80px;
+    padding-left: 90px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 32px;
+      height: 22px;
+      top: 35px;
+      left: 35px;
+      background-image: url('../../img/icon-video.svg');
+      background-position: 50% 50%;
+    }
+  }
+
+  &__icon-play {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: -50px;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      transform: scale(0.8);
+      opacity: 0.8;
+    }
   }
   
   &__video {
+    position: relative;
     height: 150px;
+    background-color: @lightGray;
   }
 
   &__description {
     .paragraphText;
     line-height: 24px;
+    margin-top: 0;
+    margin-bottom: 25px;
 
     &-wrap {
-      padding: 35px 32px;
+      padding: 25px 32px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+@media @tablet-width {
+  .production-process {
+    display: flex;
+    flex-direction: column;
+    width: 670px;
+    min-height: 743px;
+
+    &__header {
+      order: 2;
+      .productTabletNameText;
+      padding-top: 35px;
+    }
+    
+    &__icon-play {
+      position: absolute;
+      top: 195px;
+    }
+
+    &__video {
+      order: 1;
+      width: 670px;
+      height: 455px;
+    }
+
+    &__description {
+      .TabletParagraphText;
+      margin-top: 10px;
+      margin-bottom: 33px;
+
+      &-wrap {
+        order: 3;
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+@media @desktop-width {
+  .production-process {
+    width: 1050px;
+    min-height: auto;
+    margin-bottom: 100px;
+  
+    &__header {
+      width: 100px;
+      margin-left: auto;
+      margin-right: 145px;
+      padding-top: 100px;
+
+      &::before {
+        top: 50px;
+        left: 90px;
+      }
+    }
+
+    &__description-wrap {
+      width: 245px;
+      margin-left: auto;
+      padding-bottom: 67px;
+    }
+
+    &__video {
+      width: 681px;
+      position: absolute;
     }
   }
 }

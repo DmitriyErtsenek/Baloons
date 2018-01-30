@@ -21,15 +21,52 @@
 
     &-btn {
       .font(@openSans; 18px; 24px; 700; @white);
+      position: relative;
       text-decoration: none;
       padding: 26px 190px 29px 29px;
 
       &--interior {
         background-color: @mentholColor;
+        
+        &::before {
+          position: absolute;
+          content: '';
+          right: 36px;
+          width: 40px;
+          height: 62px;
+          opacity: 0.1;
+          background-image: url('../../img/icon-interior.svg');
+        }
+      
+        &:hover::before {
+          opacity: 0.3;
+        }
+
+        &:active {
+          color: rgba(255,255,255, 0.3);
+        }
       }
 
       &--toys {
         background-color: @mintGreenColor;
+
+        &::before {
+          position: absolute;
+          content: '';
+          right: 36px;
+          width: 61px;
+          height: 61px;
+          opacity: 0.1;
+          background-image: url('../../img/icon-toy.svg');
+        }
+
+        &:hover::before {
+          opacity: 0.3;
+        }
+
+        &:active {
+          color: rgba(255,255,255, 0.3);
+        }
       }
     }
   }
@@ -39,7 +76,7 @@
   .preview {
     min-height: 745px;
     margin-top: -63px;
-    background: url('../../img/hero-desktop@1x.jpg') 50% 0 no-repeat;
+    background: @creamColor url('../../img/hero-desktop@1x.jpg') 50% 0 no-repeat;
     background-size: 1150px 746px;
 
     @media @retina2x {
@@ -55,6 +92,25 @@
       &-btn {
         .font(@openSans; 20px; 30px; 700; @white);
         padding-left: 35px;
+        
+        @keyframes jump {
+          0% {margin-top: 0px;}
+          100% {margin-top: -5px;}
+        }
+
+        &--interior {
+          
+          &:hover {
+            animation: jump 0.2s ease-in-out 0s forwards; 
+          }
+        }
+
+        &--toys {
+          
+          &:hover {
+            animation: jump 0.2s ease-in-out 0s forwards; 
+          }
+        }
       }
     }
   }

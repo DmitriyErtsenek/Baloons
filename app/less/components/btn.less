@@ -6,6 +6,20 @@
   border: 2px solid @black;
   width: 100%;
   padding: 12px 0;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    color: @white;
+    background-color: @darkGray;
+    border-color: @darkGray;
+  }
+
+  &:active {
+    color: rgba(255,255,255, 0.3);
+    background-color: @darkGray;
+    border-color: @darkGray;
+  }
 }
 
 @media @tablet-width {
@@ -14,6 +28,10 @@
     bottom: 15px;
     margin-left: -115px;
     left: 50%;    
+    width: 230px;
+  }
+
+  .btn--submit {
     width: 230px;
   }
 }

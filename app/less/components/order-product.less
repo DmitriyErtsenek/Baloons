@@ -2,6 +2,11 @@
   width: 260px;
   .alignment;
   margin-bottom: 60px;
+  
+  &__br,
+  &__note {
+    display: none;
+  }  
 
   & h2 {
     .formLabelText;
@@ -28,6 +33,10 @@
   &__type {
     display: flex;
     flex-direction: column;
+    
+    & h2 {
+      margin-bottom: 20px;
+    }
 
     & label {
       position: relative;
@@ -37,47 +46,41 @@
       &::before {
         position: absolute;
         left: 0px;
-        top: -5px;
+        top: -10px;
         content: '';
         width: 35px;
-        height: 38px;
+        height: 35px;
         border: 2px solid @black;
         border-radius: 50%;
       }
-    }
 
-    & label:nth-of-type(2) {
-      &::before {
-        top: -12px;
+      &:hover::before {
+        border-color: @mentholColor;
+      }
+
+      &:active::before {
+        border-color: #b0b0b0;
       }
     }
   
-    & input:checked + label::after {
-      position: absolute;
-      left: 12px;
-      top: 8px;
-      content: '';
-      width: 16px;
-      height: 17px;
-      border-radius: 50%;
-      background-color: @mentholColor;
-    }
-
-    & input:checked + label:nth-of-type(2)::after {
-      position: absolute;
-      left: 12px;
-      top: 1px;
-      content: '';
-      width: 16px;
-      height: 17px;
-      border-radius: 50%;
-      background-color: @mentholColor;
+    & input:checked + label::before {
+      background-image: url('../../img/tick.svg');
+      background-size: 16px 17px;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
     }
   }
 
   &__color {
-    display: flex;
-    flex-direction: column;
+
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+      
+      & h2 {
+      margin-bottom: 30px;
+      }
+    }
 
     & label {
       position: relative;
@@ -92,6 +95,14 @@
         width: 38px;
         height: 39px;
         border: 2px solid @black;
+      }
+    
+      &:hover::before {
+        border-color: @mentholColor;
+      }
+
+      &:active::before {
+        border-color: #b0b0b0;
       }
     }
   
@@ -137,6 +148,10 @@
 
     & input:focus + .order-product__placeholder{
       display: none;
+    }
+
+    & input:focus {
+      box-shadow: 0 2px 0 0 @mentholColor;
     }
   }
 
@@ -198,6 +213,11 @@
       height: 148px;
       border: 2px solid @black;
       background-color: transparent;
+      outline: none;
+
+      &:focus {
+        border-color: @mentholColor;
+      }
     }
 
     & textarea:focus + .order-product__textarea-placeholder {
@@ -212,5 +232,320 @@
     width: 160px;
     top: 67px;
     left: 17px;
+  }
+}
+
+@media @tablet-width {
+  .order-product {
+    width: 100%;
+    padding-top: 45px;
+
+    & label {
+      .formLabelTabletText;
+    }
+    
+    &__preview {
+      .TabletParagraphText;
+      width: 640px;
+      .alignment;
+      margin-bottom: 75px;
+    }
+
+    &__br {
+      display: inline;
+    }
+
+    &__type {
+      position: relative;
+      width: 640px;
+      .alignment;
+      margin-bottom: 10px;
+
+      & label {
+        width: 343px;
+        margin-left: 160px;
+        margin-bottom: 55px;  
+        padding-left: 85px;
+
+        &::before {
+          width: 50px;
+          height: 50px;
+          
+        }
+      }
+      
+      & input:checked + label::before {
+        background-image: url('../../img/tick.svg');
+        background-size: 22px 22px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+      }
+
+      & label {
+        .formLabelTabletText;
+
+        &::before {
+          top: -20px;
+        }
+      }
+
+      & h2 {
+        position: absolute;
+        top: -18px;
+      }
+    }
+  
+    &__color {
+      background-color: @lightGray;
+
+      &-wrap {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        width: 640px;
+        min-height: 325px;
+        padding-left: 160px;
+        padding-top: 75px;
+        padding-bottom: 20px;
+        .alignment;
+
+        & h2 {
+          position: absolute;
+          left: 0px;
+          top: 60px;
+        }
+
+        & label {
+          .formLabelTabletText;
+          box-sizing: border-box;
+          width: 240px;
+          padding-left: 88px;
+
+          &::before {
+            width: 52px;
+            height: 50px;
+          }
+        }
+      
+        & input:checked + label::after {
+          left: 12px;
+          top: 3px;
+          width: 33px;
+          height: 22px;
+          background-size: 33px 22px;
+        }
+      }
+    }
+  
+    &__user-name {
+      margin-bottom: 45px;
+
+      &-wrap {
+        position: relative;
+        box-sizing: border-box;
+        width: 670px;
+        .alignment;
+        padding-top: 60px;
+        padding-left: 160px;
+
+        & h2 {
+          position: absolute;
+          left: 0px;
+          top: 45px;
+        }
+      }
+    }
+  
+    &__surname-wrap,
+    &__patronymic-wrap,
+    &__name-wrap {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+
+      & label {
+        margin-right: 25px;
+      }
+
+      & input {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    &__placeholder {
+      .formPlaceholderTabletText;
+      position: absolute;
+      top: -27px;
+      left: 140px;
+      width: 200px;
+      opacity: 1;
+
+      &--email,
+      &--tel {
+        .formLabelTabletText;
+        z-index: 1;
+        top: -45px;
+        left: 180px;
+
+        & span {   
+          color: @darkGray;
+          opacity: 0.4;
+        }
+      }
+    }
+  
+    &__user-phone-email {
+      padding-top: 60px;
+      padding-bottom: 50px;
+      background-color: @lightGray;
+    }
+
+    &__phone-wrap,
+    &__email-wrap {
+      position: relative;
+      box-sizing: border-box;
+      flex-direction: row;
+      width: 670px;
+      .alignment;
+      padding-left: 164px;
+
+      & h2 {
+        position: absolute;
+        left: 0px;
+      }
+
+      & input {
+        z-index: 2;
+        flex-grow: 1;
+      }
+    }
+  
+    &__user-comment {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      width: 670px;
+      .alignment;
+      margin-bottom: 53px;
+      padding-top: 64px; 
+
+      & textarea {
+        width: 500px;
+        height: 142px;
+      }
+    }
+    
+    &__submit-wrap {
+      display: flex;
+      justify-content: space-between;
+      width: 670px;
+      height: 55px;
+      .alignment;
+    }
+
+    &__note {
+      .TabletParagraphText;
+      display: flex;
+      width: 280px;
+    }
+  
+    &__textarea-placeholder {
+      .formPlaceholderTabletText;
+      position: absolute;
+      width: 400px;
+      top: 80px;
+      left: 190px;
+    }
+  }
+}
+
+@media @desktop-width {
+  .order-product {
+
+    &__type {
+      width: 1050px;
+
+      & h2 {
+        left: 90px;
+      }
+
+      & label {
+        margin-left: 205px;
+      }
+    }
+  
+    &__color {
+      &-wrap {
+        width: 1050px;
+        min-height: 250px;
+        padding-left: 205px;
+
+        & h2 {
+          left: 90px;
+        }
+
+        & label {
+          margin-right: 20px;
+        }
+      }
+    }
+  
+    &__user-name {
+
+      &-wrap {
+        width: 1050px;
+        padding-left: 205px;
+        padding-right: 150px;
+
+        & h2 {
+          top: 52px;
+          left: 90px;
+        }
+      }
+    }
+    
+    &__email-wrap,
+    &__phone-wrap {
+      width: 1050px;
+      padding-left: 205px;
+      padding-right: 150px;
+
+      & h2 {
+        left: 95px;
+      }
+    }
+
+    &__placeholder {
+      &--email,
+      &--tel {
+        left: 220px;
+      }
+    }
+
+    &__user-comment {
+      box-sizing: border-box;
+      width: 1050px;
+      margin-bottom: 90px;
+      padding-right: 150px;
+
+      & h2 {
+        margin-left: 95px;
+      }
+
+      & textarea {
+        width: 700px;
+      }
+    }
+
+    &__textarea-placeholder {
+      left: 220px;
+    }
   }
 }
