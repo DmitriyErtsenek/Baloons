@@ -61,12 +61,36 @@
     &__logo {
       display: flex;
       height: 55px;
+
+      &-img {
+        &:hover path {
+          fill: @mintGreenColor;
+        }
+
+        &:active {
+          opacity: 0.5;
+        }
+      }
     }
   
     &__links {
       height: 55px;
       margin: 0;
       margin-left: 160px;
+
+      & svg {
+        &:hover {
+          transform: scale(1.2);
+        }
+
+        &:hover path {
+          fill: @mintGreenColor;
+        }
+
+        &:active {
+          opacity: 0.5;
+        }
+      }
 
       &::before {
         display: none;
@@ -78,6 +102,20 @@
       width: 220px;
       margin: 0px;
       margin-left: auto;
+
+      & svg {
+        &:hover {
+          transform: scale(1.2);
+        }
+
+        &:hover path {
+          fill: @mintGreenColor;
+        }
+
+        &:active {
+          opacity: 0.5;
+        }
+      }
     }
   }
 }

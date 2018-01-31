@@ -24,10 +24,111 @@
 
   &__user-nickname {
     .paragraphText;
-    margin-bottom: 35px;
   }
 
-  &__navigation {
+  &__content {
+    margin-bottom: 35px;
+  }
+  
+  & .owl-nav {
+    display: flex;
+    margin-bottom: 38px; 
+  }
 
+  & .owl-prev,
+    .owl-next {
+    font-size: 0px;
+    width: 128px;
+    height: 49px;
+    background-repeat: no-repeat;
+    background-size: 50px 26px;
+    background-position: 50% 50%;
+    border: 1px solid @lightGray;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.2;
+    }
+  }
+
+  & .owl-prev {
+    background-image: url('../img/icon-left-arrow.svg');
+    
+  }
+
+  & .owl-next {
+    width: 129px;
+    background-image: url('../img/icon-right-arrow.svg'); 
+    border-left: none;       
+  }
+}
+
+@media @tablet-width {
+  .reviews {
+    position: relative;
+    box-sizing: border-box;
+    width: 760px;
+    margin-bottom: 70px;
+    padding-top: 75px;
+    padding-left: 50px;
+    background-image: url('../img/review@1x.jpg');
+    background-repeat: no-repeat;
+    background-size: 350px 457px;
+
+    &__header {
+      .headerTabletText;
+      margin-bottom: 50px;
+    }
+    
+    &__comment {
+      .TabletParagraphText;
+      margin-bottom: 10px;
+    }
+
+    &__wrap {
+      width: 670px;
+      min-height: 280px;
+    }
+
+    &__user-name {
+      font-size: 16px;
+    }
+
+    &__user-nickname {
+      .TabletParagraphText;
+    }
+
+    & .owl-nav {
+      position: absolute;
+      right: 0px;
+    }
+
+    & .owl-prev,
+      .owl-next {
+       border: none;
+       width: 85px;
+    }
+  }
+}
+
+@media @desktop-width {
+  .reviews {
+    display: flex;
+    flex-direction: column;
+    width: 1050px;
+    min-height: 457px;
+    padding-left: 175px;
+
+    &__header {
+      .headerDesktopText;
+    }   
+
+    & .owl-nav {
+      top: 120px;
+      right: -220px;
+    }
   }
 }
