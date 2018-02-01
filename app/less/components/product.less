@@ -79,8 +79,19 @@
     }
 
     &__price {
+      position: relative;
       margin: 0;
       width: 100%;
+
+      &::before {
+        content: '';
+        position: absolute;
+        right: 0px;
+        width: 21px;
+        height: 18px;
+        opacity: 0.2;
+        background-image: url('../img/icon-cart.svg');
+      }
 
       & span {
         .productTabletPriceText;
@@ -106,7 +117,13 @@
     }
 
     &__description {
-      margin-bottom: 35px;
+      margin-bottom: 15px;
+    }
+
+    &__price {
+      &::before {
+        right: 0px;
+      }
     }
   }
 }

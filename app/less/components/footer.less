@@ -33,7 +33,7 @@
     display: flex;
     width: 260px;
     .alignment;
-    padding: 10px 0;
+    padding: 7px 0;
     padding-bottom: 14px;
     
     &-logo {
@@ -42,7 +42,21 @@
 
     & p {
       margin-left: 40px;
-      margin-right: 26px;
+      margin-right: 35px;
+    }
+
+    & svg {
+      & path {
+        fill: @mintGreenColor;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
     }
   }
 }
@@ -53,9 +67,11 @@
     &__wrap {
       display: flex;
       align-items: center;
-      height: 143px;
+      box-sizing: border-box;
+      height: 133px;
       width: 670px;
       .alignment;
+      padding-top: 20px;
     }
 
     &__logo {
@@ -102,20 +118,6 @@
       width: 220px;
       margin: 0px;
       margin-left: auto;
-
-      & svg {
-        &:hover {
-          transform: scale(1.2);
-        }
-
-        &:hover path {
-          fill: @mintGreenColor;
-        }
-
-        &:active {
-          opacity: 0.5;
-        }
-      }
     }
   }
 }

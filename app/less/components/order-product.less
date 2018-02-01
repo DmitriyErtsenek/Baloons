@@ -35,7 +35,7 @@
     flex-direction: column;
     
     & h2 {
-      margin-bottom: 20px;
+      margin-bottom: 33px;
     }
 
     & label {
@@ -78,7 +78,8 @@
       flex-direction: column;
       
       & h2 {
-      margin-bottom: 30px;
+        margin-top: 5px;
+      margin-bottom: 37px;
       }
     }
 
@@ -123,6 +124,11 @@
     display: flex;
     flex-direction: column;
     
+    & h2 {
+      margin-top: 0px;
+      margin-bottom: 30px;
+    }
+
     & label {
       margin-bottom: 10px;
     }
@@ -246,9 +252,9 @@
     
     &__preview {
       .TabletParagraphText;
-      width: 640px;
+      width: 670px;
       .alignment;
-      margin-bottom: 75px;
+      margin-bottom: 80px;
     }
 
     &__br {
@@ -257,7 +263,7 @@
 
     &__type {
       position: relative;
-      width: 640px;
+      width: 670px;
       .alignment;
       margin-bottom: 10px;
 
@@ -265,12 +271,12 @@
         width: 343px;
         margin-left: 160px;
         margin-bottom: 55px;  
-        padding-left: 85px;
+        padding-left: 90px;
 
         &::before {
           width: 50px;
           height: 50px;
-          
+          left: 8px;
         }
       }
       
@@ -304,9 +310,9 @@
         flex-direction: row;
         flex-wrap: wrap;
         box-sizing: border-box;
-        width: 640px;
+        width: 670px;
         min-height: 325px;
-        padding-left: 160px;
+        padding-left: 165px;
         padding-top: 75px;
         padding-bottom: 20px;
         .alignment;
@@ -314,19 +320,23 @@
         & h2 {
           position: absolute;
           left: 0px;
-          top: 60px;
+          top: 70px;
         }
 
         & label {
           .formLabelTabletText;
           box-sizing: border-box;
-          width: 240px;
+          width: 230px;
           padding-left: 88px;
 
           &::before {
             width: 52px;
             height: 50px;
           }
+        }
+
+        & label:nth-of-type(2n-1) {
+          margin-right: 35px;
         }
       
         & input:checked + label::after {
@@ -340,7 +350,7 @@
     }
   
     &__user-name {
-      margin-bottom: 45px;
+      margin-bottom: 32px;
 
       &-wrap {
         position: relative;
@@ -353,7 +363,7 @@
         & h2 {
           position: absolute;
           left: 0px;
-          top: 45px;
+          top: 65px;
         }
       }
     }
@@ -365,7 +375,7 @@
       align-items: center;
       flex-direction: row;
       box-sizing: border-box;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       padding-bottom: 10px;
 
       & label {
@@ -403,7 +413,7 @@
   
     &__user-phone-email {
       padding-top: 60px;
-      padding-bottom: 50px;
+      padding-bottom: 35px;
       background-color: @lightGray;
     }
 
@@ -418,12 +428,14 @@
 
       & h2 {
         position: absolute;
+        top: -5px;
         left: 0px;
       }
 
       & input {
         z-index: 2;
         flex-grow: 1;
+        margin-bottom: 35px;
       }
     }
   
@@ -433,7 +445,7 @@
       flex-direction: row;
       width: 670px;
       .alignment;
-      margin-bottom: 53px;
+      margin-bottom: 45px;
       padding-top: 64px; 
 
       & textarea {
@@ -468,16 +480,18 @@
 
 @media @desktop-width {
   .order-product {
+    margin-bottom: 90px;
+    padding-top: 100px;
 
     &__type {
       width: 1050px;
 
       & h2 {
-        left: 90px;
+        left: 75px;
       }
 
       & label {
-        margin-left: 205px;
+        margin-left: 175px;
       }
     }
   
@@ -485,13 +499,18 @@
       &-wrap {
         width: 1050px;
         min-height: 250px;
-        padding-left: 205px;
+        padding-left: 180px;
 
         & h2 {
-          left: 90px;
+          left: 70px;
+        }
+        
+        & label:nth-of-type(2n-1) {
+          margin-right: 20px;
         }
 
         & label {
+          width: 245px;
           margin-right: 20px;
         }
       }
@@ -501,12 +520,12 @@
 
       &-wrap {
         width: 1050px;
-        padding-left: 205px;
+        padding-left: 185px;
         padding-right: 150px;
 
         & h2 {
-          top: 52px;
-          left: 90px;
+          top: 70px;
+          left: 70px;
         }
       }
     }
@@ -514,11 +533,11 @@
     &__email-wrap,
     &__phone-wrap {
       width: 1050px;
-      padding-left: 205px;
+      padding-left: 185px;
       padding-right: 150px;
 
       & h2 {
-        left: 95px;
+        left: 70px;
       }
     }
 
@@ -533,10 +552,10 @@
       box-sizing: border-box;
       width: 1050px;
       margin-bottom: 90px;
-      padding-right: 150px;
+      padding-right: 170px;
 
       & h2 {
-        margin-left: 95px;
+        margin-left: 72px;
       }
 
       & textarea {
@@ -546,6 +565,10 @@
 
     &__textarea-placeholder {
       left: 220px;
+    }
+
+    &__submit-wrap {
+      width: 690px;
     }
   }
 }

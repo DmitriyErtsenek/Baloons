@@ -87,11 +87,10 @@
     &__logo-tablet {
       order: 1;
       display: flex;
-      flex-grow: 3;
-      box-sizing: border-box;
-      width: 370px;
-      height: 89px;
-      padding: 22px 50px;
+      flex-grow: 1;
+      width: 230px;
+      height: 63px;
+      padding-top: 25px;
       padding-left: 7vw;
       border-bottom: 1px solid @lightGray;
       border-right: 1px solid @lightGray;
@@ -149,7 +148,6 @@
     }
   
     &__cart {
-      position: relative;
       display: flex;
       order: 3;
       flex-grow: 1;
@@ -158,14 +156,27 @@
       height: 89px;
       border-bottom: 1px solid @lightGray;
       border-left: 1px solid @lightGray;
+      
+      &-link {
+        position: relative;
+      }
 
       &-img {
+        display: block;
         position: absolute;
-        left: 45px;
+        right: 255px;
+        top: 35px;
 
         & path {
           fill: @black;
           opacity: 0.2;
+        }
+      }
+
+      @-moz-document url-prefix() { 
+        .main-nav__cart-img {
+          top: 36px;
+          right: 255px;
         }
       }
 
@@ -211,7 +222,7 @@
     }
 
     &__knitting {
-      width: 170px;
+      width: 195px;
       border-bottom: none;
       height: 63px;
       align-items: center;
@@ -246,7 +257,7 @@
       order: 2;
       display: flex;
       align-items: center;
-      padding-right: 85px;
+      padding-right: 105px;
       border-bottom: 1px solid @lightGray;
 
       &:hover {
@@ -271,7 +282,8 @@
     }
 
     &__knitting {
-      padding: 13px 67px 13px 36px;
+      width: 170px;
+      padding: 13px 50px 13px 36px;
       border-left: 1px solid @lightGray;
     }
 

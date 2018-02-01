@@ -1,7 +1,7 @@
 .production-process {
   width: 260px;
   .alignment;
-  margin-bottom: 60px;
+  margin-bottom: 65px;
   border: 1px solid @lightGray;
 
   &__header {
@@ -65,11 +65,16 @@
     flex-direction: column;
     width: 670px;
     min-height: 743px;
+    margin-bottom: 60px;
 
     &__header {
       order: 2;
       .productTabletNameText;
       padding-top: 35px;
+
+      &::before {
+        left: 40px;
+      }
     }
     
     &__icon-play {
@@ -90,6 +95,7 @@
 
       &-wrap {
         order: 3;
+        padding: 25px 40px;
         padding-top: 0;
       }
     }
@@ -106,12 +112,17 @@
       width: 100px;
       margin-left: auto;
       margin-right: 145px;
-      padding-top: 100px;
+      padding-top: 95px;
 
       &::before {
-        top: 50px;
-        left: 90px;
+        top: 45px;
+        left: 83px;
       }
+    }
+    
+    &__description {
+      margin-top: 8px;
+      margin-bottom: 45px;
     }
 
     &__description-wrap {
