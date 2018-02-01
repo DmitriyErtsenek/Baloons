@@ -1,11 +1,11 @@
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel({
-    singleItem:true,
-    touchDrag: false,
+    singleItem:true, //Выводится один слайд
+    touchDrag: false, //Запрет на пролистывание слайдов по нажатию на сам слайд (моб.устройства)
     loop:true, //Зацикливаем слайдер
-    margin:10, //Отступ от картино если выводите больше 1
-    nav:true, //Отключил навигацию
-    autoHeight:true,
+    margin:10, //Отступ между блоками если выводите больше 1
+    nav:true, //Навигация
+    autoHeight:true,  // автоматическое изменение высоты
     autoplay:true, //Автозапуск слайдера
     smartSpeed:1000, //Время движения слайда
     autoplayTimeout:8000, //Время смены слайда
@@ -22,3 +22,40 @@ $(document).ready(function(){
     }
   });
 });
+
+
+ymaps.ready(init);
+  var myMap,
+      myPlacemark;
+
+  function init(){     
+    myMap = new ymaps.Map("map", {
+      center: [59.93863106, 30.32305450],
+      zoom: 17
+    });
+
+    var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+      hintContent: 'Mishka',
+      iconLayout: 'default#image',
+      iconImageHref: '../img/icon-map-pin.svg',
+      iconImageSize: [66, 100],
+      iconImageOffset: [-25, -102]
+    });
+
+    myMap.geoObjects.add(myPlacemark);
+
+    myMap.controls
+      .remove('zoomControl')
+      .remove('trafficControl')
+      .remove('typeSelector')
+      .remove('rulerControl')
+      .remove('fullscreenControl')
+      .remove('routeButtonControl')
+      .remove('searchControl')
+      .remove('geolocationControl');
+};
+
+
+
+   
+

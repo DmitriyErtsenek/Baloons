@@ -1,7 +1,8 @@
 .contacts {
   display: flex;
   flex-direction: column;
-  width: 260px;
+  position: relative;
+  width: 100%;
   .alignment;
 
   &__header {
@@ -44,29 +45,48 @@
     position: relative;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 670px;
     padding-top: 30px;
     
     &__wrapper {
       display: flex;
       flex-wrap: wrap;
+      width: 670px;
+      .alignment;
     }
 
     &__header {
       .headerTabletText;
+      position: relative;
       width: 670px;
       margin-bottom: 50px;
+
+      &::before {
+        position: absolute;
+        content: '';
+        right: 0;
+        width: 47px;
+        height: 81px;
+        background-image: url('../img/icon-flag.svg');
+      }
     }
   
     &__email {
+      .TabletParagraphText;
+      width: 300px;
       margin: 0;
       margin-bottom: 117px;
+    }
+
+    &__address {
+      .TabletParagraphText;
+      width: 300px;
     }
   }
 }
 
 @media @desktop-width {
   .contacts {
+    flex-wrap: nowrap;
     width: 1050px;
     margin-bottom: 105px;
     padding-top: 40px;
@@ -74,6 +94,8 @@
     &__wrapper {
       display: flex;
       flex-direction: column;
+      width: 400px;
+      margin-right: 0;
       margin-left: 165px;
       padding-top: 70px;
     }
@@ -81,6 +103,11 @@
     &__header {
       .headerDesktopText;
       width: 300px;
+      margin-left: 0;
+
+      &::before {
+        left: -100px;       
+      }
     }
   
     &__email {
