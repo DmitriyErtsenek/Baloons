@@ -8,7 +8,12 @@
   }
 }
 
-
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .pattern {
+    height: 14px;
+    background-size: 12px 14px;
+  }  
+}
 
 @media @tablet-width {
   .pattern {
@@ -22,10 +27,18 @@
       top: -15px;
       margin-bottom: 0px;
       background-image: url('../img/pattern2.svg');
-      background-size: 40px 31px ;
+      background-size: 40px 31px;
       background-position: 24px 0;
       opacity: 1;
     }
+  }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .pattern {
+      height: 24px;
+      background-size: 40px 31px;
+      background-position: 24px 0;
+    }  
   }
 }
 

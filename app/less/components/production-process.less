@@ -56,6 +56,22 @@
       padding: 25px 32px;
       padding-bottom: 30px;
     }
+  } 
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .production-process {
+    &__img {
+      height: 150px;
+      background-size: 260px 150px;
+      background-color: transparent;
+      background-image: url('../img/video-desktop@2x.jpg');
+      background-repeat: no-repeat;
+
+      & img {
+        height: 0px;
+      }
+    }
   }
 }
 
@@ -99,6 +115,21 @@
         padding-top: 0;
       }
     }
+  
+    &__img {
+      & img {
+        width: 670px;
+      }
+    }
+  }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .production-process {
+      &__img {
+        height: 457px;
+        background-size: 670px 457px;
+      }
+    }
   }
 }
 
@@ -135,5 +166,31 @@
       width: 681px;
       position: absolute;
     }
+  
+    &__img {
+      & img {
+        width: 681px;
+        height: 461px;
+      }
+    }
+  }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .production-process {
+      &__video {
+        width: 665px;
+      }
+
+      &__img {
+        width: 665px;
+        height: 461px;
+        background-size: 670px 462px;
+
+        & img {
+          height: 0px;
+        }
+      }
+    }
   }
 }
+

@@ -98,6 +98,20 @@
       }
     }
   }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .product {
+      & img {
+        width: 335px;
+      }
+
+      &__card {
+        box-sizing: border-box;
+        width: 335px;
+        height: 251px;
+      }
+    }  
+  }
 }
 
 @media @desktop-width {
@@ -125,5 +139,13 @@
         right: 0px;
       }
     }
+  }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .product {
+      &__img {
+        height: 235px;
+      }
+    }  
   }
 }

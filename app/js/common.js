@@ -53,7 +53,27 @@ ymaps.ready(init);
       .remove('routeButtonControl')
       .remove('searchControl')
       .remove('geolocationControl');
+
+    myMap.behaviors
+      .disable('drag');
 };
+
+
+  var mainNavClosed = document.querySelector('.main-nav__closed');
+  var mainNav = document.querySelector('.main-nav');
+  var toggle = document.querySelector('.main-nav__btn');
+
+  mainNav.classList.remove('main-nav--noJs');
+  mainNav.classList.add('main-nav--closed');
+
+  toggle.addEventListener('click', function(){
+   if (mainNav.classList.contains('main-nav--closed')) {
+    mainNav.classList.remove('main-nav--closed');
+   } else {
+    mainNav.classList.add('main-nav--closed');
+   }
+  });
+
 
 
 
