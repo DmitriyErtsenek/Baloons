@@ -5,12 +5,12 @@
   <title>Main</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <header class="header">
-    <nav class="main-nav main-nav--noJs">
+    <nav class="header__nav main-nav main-nav--noJs">
       <div class="main-nav__logo-desktop">
         <a href="index.html">
           <svg x="0px" y="0px" width="148.051px" height="72.707px" viewBox="0 0 148.051 72.707" enable-background="new 0 0 148.051 72.707" xml:space="preserve">
@@ -105,104 +105,112 @@
       </div>
     </nav>   
   </header>
-  <main>
-    <article class="preview">
-      <div class="page-header">
-        <h1>Милые штуки ручной<br> работы для дома</h1>
-      </div>
-      <nav class="preview__nav">
-        <a href="#" class="preview__nav-btn preview__nav-btn--interior">Предметы интерьера</a>
-        <a href="#" class="preview__nav-btn preview__nav-btn--toys">Детские игрушки</a>
-      </nav>
-    </article>
-    <div class="pattern pattern--tablet"></div>   
-    <article class="week-product">
-      <div class="week-product__header">
-        <h2>
-          Вязаные корзинки
-        </h2>
-        <span>Товар недели</span>
-      </div>
-      <div class="week-product__wrap-description">
-        <p class="week-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах. 
-        </p>
-        <table class="week-product__details">
-          <tr>
-            <td>Цвет:</td>
-            <td>«Тиффани»/серый</td>
-          </tr>
-          <tr>
-            <td>Диаметр:</td>
-            <td>25 см</td>
-          </tr>
-          <tr>
-            <td>Высота:</td>
-            <td>15 см</td>
-          </tr>
-        </table>
-      </div>
-      <div class="week-product__img">
-        <picture>
-            <source media="(min-width:1150px)"
-                    srcset="img/triple-set-desktop@1x.jpg 1x,
-                            img/triple-set-desktop@2x.jpg 2x">
-            <source media="(min-width:785px)"
-                    srcset="img/triple-set-tablet@1x.jpg 1x,
-                            img/triple-set-tablet@2x.jpg 2x">
-            <img src="img/triple-set-mobile@1x.jpg" alt="вязаная корзинка"
-                 srcset="img/triple-set-mobile@2x.jpg 2x">
-          </picture>
-      </div>
-      <div class="week-product__wrap-price">
-        <span class="week-product__price">Цена: 990 руб.</span>
-        <button class="btn">Заказать</button>
-      </div>
-    </article>
-    <div class="pattern "></div>
-    <section class="about-us">
-      <h2 class="about-us__header">Коротко о нас:</h2>
-      <ul class="about-us__list">
-        <li class="about-us__achievement about-us__achievement--ach1">
-          Экологически<br> чистые материалы
-        </li>
-        <li class="about-us__achievement about-us__achievement--ach2">
-          Скандинавский стиль<br> по российской цене
-        </li>
-        <li class="about-us__achievement about-us__achievement--ach3">
-          Увеличивает лайки<br> на фотографиях
-        </li>
-        <li class="about-us__achievement about-us__achievement--ach4">
-          Связано вручную с<br> любовью и умилением
-        </li>
-        <li class="about-us__achievement about-us__achievement--ach5">
-          Поддержка отечественного производителя
-        </li>
-        <li class="about-us__achievement about-us__achievement--ach6">
-          Поставляется в<br> подарочной упаковке
-        </li>
-      </ul>
-    </section>
-    <section class="reviews">
-      <h2 class="reviews__header">Отзывы</h2>
-      <div class="reviews__wrap owl-carousel">
-        <div class="reviews__content">
-          <p class="reviews__comment">
-            Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке и мои фотографии сразу стали более стильнее, а также набирают больше лайков!
-          </p>
-          <p class="reviews__user-name">Анастасия Красильникова</p>
-          <span class="reviews__user-nickname">@misssssiskras</span>
+  <main class="main-page">
+    <div class="main-page__head">
+      <article class="preview">
+        <div class="page-header page-header--main">
+          <h1>Милые штуки ручной<br> работы для дома</h1>
         </div>
-        <div class="reviews__content">
-          <p class="reviews__comment">
-            Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. От всех запятых мир правилами всеми! 
-          </p>
-          <p class="reviews__user-name">Джордж</p>
-          <span class="reviews__user-nickname">JJ</span>
+        <nav class="preview__nav">
+          <a href="#" class="preview__nav-btn preview__nav-btn--interior">Предметы интерьера</a>
+          <a href="#" class="preview__nav-btn preview__nav-btn--toys">Детские игрушки</a>
+        </nav>
+      </article>
+    </div>
+    <div class="main-page__pattern pattern pattern--tablet"></div>   
+    <div class="main-page__product">
+      <article class="week-product">
+        <div class="week-product__header">
+          <h2>
+            Вязаные корзинки
+          </h2>
+          <span>Товар недели</span>
         </div>
-      </div>
-      <button class="btn btn--slider">Написать</button>
-    </section>
-    <div class="pattern"></div>
+        <div class="week-product__wrap-description">
+          <p class="week-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах. 
+          </p>
+          <table class="week-product__details">
+            <tr>
+              <td>Цвет:</td>
+              <td>«Тиффани»/серый</td>
+            </tr>
+            <tr>
+              <td>Диаметр:</td>
+              <td>25 см</td>
+            </tr>
+            <tr>
+              <td>Высота:</td>
+              <td>15 см</td>
+            </tr>
+          </table>
+        </div>
+        <div class="week-product__img">
+          <picture>
+              <source media="(min-width:1150px)"
+                      srcset="img/triple-set-desktop@1x.jpg 1x,
+                              img/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width:785px)"
+                      srcset="img/triple-set-tablet@1x.jpg 1x,
+                              img/triple-set-tablet@2x.jpg 2x">
+              <img src="img/triple-set-mobile@1x.jpg" alt="вязаная корзинка"
+                   srcset="img/triple-set-mobile@2x.jpg 2x">
+            </picture>
+        </div>
+        <div class="week-product__wrap-price">
+          <span class="week-product__price">Цена: 990 руб.</span>
+          <button class="btn">Заказать</button>
+        </div>
+      </article>
+    </div>
+    <div class="main-page__pattern pattern"></div>
+    <div class="main-page__about">
+      <section class="about-us">
+        <h2 class="about-us__header">Коротко о нас:</h2>
+        <ul class="about-us__list">
+          <li class="about-us__achievement about-us__achievement--ach1">
+            Экологически<br> чистые материалы
+          </li>
+          <li class="about-us__achievement about-us__achievement--ach2">
+            Скандинавский стиль<br> по российской цене
+          </li>
+          <li class="about-us__achievement about-us__achievement--ach3">
+            Увеличивает лайки<br> на фотографиях
+          </li>
+          <li class="about-us__achievement about-us__achievement--ach4">
+            Связано вручную с<br> любовью и умилением
+          </li>
+          <li class="about-us__achievement about-us__achievement--ach5">
+            Поддержка отечественного производителя
+          </li>
+          <li class="about-us__achievement about-us__achievement--ach6">
+            Поставляется в<br> подарочной упаковке
+          </li>
+        </ul>
+      </section>
+    </div>
+    <div class="main-page__reviews">
+      <section class="reviews">
+        <h2 class="reviews__header">Отзывы</h2>
+        <div class="reviews__wrap owl-carousel">
+          <div class="reviews__content">
+            <p class="reviews__comment">
+              Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке и мои фотографии сразу стали более стильнее, а также набирают больше лайков!
+            </p>
+            <p class="reviews__user-name">Анастасия Красильникова</p>
+            <span class="reviews__user-nickname">@misssssiskras</span>
+          </div>
+          <div class="reviews__content">
+            <p class="reviews__comment">
+              Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. От всех запятых мир правилами всеми! 
+            </p>
+            <p class="reviews__user-name">Джордж</p>
+            <span class="reviews__user-nickname">JJ</span>
+          </div>
+        </div>
+        <button class="btn btn--slider">Написать</button>
+      </section>
+    </div>
+    <div class="main-page__pattern pattern"></div>
     <div class="contacts">
       <div class="contacts__wrapper">
         <h2 class="contacts__header">Контакты</h2>

@@ -9,7 +9,7 @@
 </head>
 <body>
   <header class="header">
-    <nav class="main-nav">
+    <nav class="header__nav main-nav main-nav--noJs">
       <div class="main-nav__logo-desktop">
         <a href="index.html">
           <svg x="0px" y="0px" width="148.051px" height="72.707px" viewBox="0 0 148.051 72.707" enable-background="new 0 0 148.051 72.707" xml:space="preserve">
@@ -104,8 +104,8 @@
       </div>
     </nav>   
   </header>
-  <main>
-    <div class="page-header page-header--form">
+  <main class="form-page">
+    <div class="form-page__header page-header">
       <h1>Вязание на заказ</h1>
     </div>
     <div class="pattern pattern--tablet"></div>
@@ -114,68 +114,60 @@
         Мы будем рады воплотить в жизнь ваши пожелания! <br class="order-product__br"> Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали.
       </p>
       <div class="order-product__type">
-        <h2>Тип</h2>
+        <h2 class="order-product__type-header">Тип</h2>
         <input id="interior" type="radio" name="type">
-        <label for="interior">Аксессуар для интерьера
+        <label class="order-product__type-label" for="interior">Аксессуар для интерьера
         </label>
         <input id="toy" type="radio" name="type">
-        <label for="toy">Детская игрушка</label>
+        <label class="order-product__type-label" for="toy">Детская игрушка</label>
       </div>
       <div class="order-product__color">
         <div class="order-product__color-wrap">
-          <h2>Цвет</h2>
+          <h2 class="order-product__color-header">Цвет</h2>
           <input id="white" name="white" type="checkbox">
-          <label for="white">Белый</label>
+          <label class="order-product__color-label" for="white">Белый</label>
           <input id="gray" name="gray" type="checkbox">
-          <label for="gray">Серый</label>
+          <label class="order-product__color-label" for="gray">Серый</label>
           <input id="Tiffany" name="Tiffany" type="checkbox">
-          <label for="Tiffany">«Тиффани»</label>
+          <label class="order-product__color-label" for="Tiffany">«Тиффани»</label>
           <input id="black" name="black" type="checkbox">
-          <label for="black">Черный</label>
+          <label class="order-product__color-label" for="black">Черный</label>
           <input id="pink" name="pink" type="checkbox">
-          <label for="pink">Розовый</label>
+          <label class="order-product__color-label" for="pink">Розовый</label>
           <input id="orange" name="orange" type="checkbox">
-          <label for="orange">Оранжевый</label>
+          <label class="order-product__color-label" for="orange">Оранжевый</label>
         </div>
       </div>
       <div class="order-product__user-name">
         <div class="order-product__user-name-wrap">
-          <h2>Фио</h2>
+          <h2 class="order-product__user-name-header">Фио</h2>
           <div class="order-product__surname-wrap">
-            <label for="">Фамилия:</label>
-            <input type="text">
-            <div class="order-product__placeholder"><span>Укажите фамилию</span></div>
+            <label class="order-product__user-name-label" for="">Фамилия:</label>
+            <input type="text" placeholder="Укажите фамилию">
           </div>
           <div class="order-product__name-wrap">
-            <label for="">Имя:</label>
-            <input type="text">
-            <div class="order-product__placeholder"><span>Введите ваше имя</span></div>
+            <label class="order-product__user-name-label" for="">Имя:</label>
+            <input type="text" placeholder="Введите ваше имя">
           </div>
           <div class="order-product__patronymic-wrap">
-            <label for="">Отчество:</label>
-            <input type="text">
-            <div class="order-product__placeholder"><span>Отчество, если желаете</span></div>
+            <label class="order-product__user-name-label" for="">Отчество:</label>
+            <input type="text" placeholder="Отчество, если желаете">
           </div>
         </div>
       </div>
       <div class="order-product__user-phone-email">
         <div class="order-product__phone-wrap">
-          <h2>Тел</h2>
-          <input type="tel">
-          <div class="order-product__placeholder order-product__placeholder--tel"><span>+7 XXX XX XX</span></div>
+          <h2 class="order-product__phone-header">Тел</h2>
+          <input type="tel" placeholder="+7 XXX XX XX">
         </div>
         <div class="order-product__email-wrap">
-          <h2>E-mail</h2>
-          <input type="email">
-          <div class="order-product__placeholder order-product__placeholder--email "><span>Ваш e-mail</span></div>
+          <h2 class="order-product__email-header">E-mail</h2>
+          <input type="email" placeholder="Ваш e-mail">
         </div>
       </div>
       <div class="order-product__user-comment">
-        <h2>Доп</h2>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-        <div class="order-product__textarea-placeholder">
-          Опишите все ваши пожелания к заказу
-        </div>
+        <h2 class="order-product__user-comment-header">Доп</h2>
+        <textarea class="order-product__user-comment-textarea" name="" id="" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
       </div>
       <div class="order-product__submit-wrap">
         <button class="btn btn--submit" type="submit">
@@ -245,5 +237,8 @@
       </div>
     </div>
   </footer>
+  <script src="js/libs.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script src="js/common.js"></script>
 </body>
 </html>

@@ -1,22 +1,55 @@
 .order-product {
   width: 260px;
   .alignment;
-  margin-bottom: 60px;
   
   &__br,
   &__note {
     display: none;
   }  
 
-  & h2 {
+  &__type-header,
+  &__color-header,
+  &__user-name-header,
+  &__phone-header,
+  &__email-header,
+  &__user-comment-header {
     .formLabelText;
+    display: flex;
+    flex-grow: 10;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
     text-transform: uppercase;
+    min-width: 260px;
     color: @mentholColor;
+
+    &::after {
+      order: 3;
+      content: '';
+      flex-grow: 2;
+      height: 1px;
+      width: 100px;
+      background-color: @mentholColor;
+    }
+
+    &::before {
+      order: 2;
+      content: '';
+      width: 30px;
+    }
   }
 
-  & label {
+  &__email-header {
+    &::before {
+      left: 80px;
+    }
+  }
+
+  &__type-label,
+  &__color-label,
+  &__user-name-label {
     .formLabelText;
-    cursor: pointer;
+    cursor: pointer;    
   }
 
   & input[type="checkbox"],
@@ -34,11 +67,11 @@
     display: flex;
     flex-direction: column;
     
-    & h2 {
+    &-header {
       margin-bottom: 33px;
     }
 
-    & label {
+    &-label {
       position: relative;
       padding-left: 62px;
       margin-bottom: 35px;
@@ -73,17 +106,7 @@
 
   &__color {
 
-    &-wrap {
-      display: flex;
-      flex-direction: column;
-      
-      & h2 {
-        margin-top: 5px;
-      margin-bottom: 37px;
-      }
-    }
-
-    & label {
+    &-label {
       position: relative;
       margin-bottom: 47px;
       padding-left: 68px; 
@@ -106,6 +129,16 @@
         border-color: #b0b0b0;
       }
     }
+
+    &-header {
+      margin-top: 5px;
+      margin-bottom: 37px;
+    }
+
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+    }
   
     & input:checked + label::after {
       position: absolute;
@@ -124,12 +157,12 @@
     display: flex;
     flex-direction: column;
     
-    & h2 {
+    &-header {
       margin-top: 0px;
       margin-bottom: 30px;
     }
 
-    & label {
+    &-label {
       margin-bottom: 10px;
     }
 
@@ -161,14 +194,31 @@
     }
   }
 
-  &__placeholder {
-    & span {
-      .formPlaceholderText;
-      z-index: -1;
-      position: absolute;
-      top: 35px;
+    &__phone-wrap,
+    &__email-wrap {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 24px;
+        right: 0px;
+        top: 55px;
+        background-image: url('../img/icon-phone.svg');
+        opacity: 0.3;
+      }
     }
-  }
+
+    &__email-wrap {
+      &::before {
+        top: 45px;
+        width: 32px;
+        height: 26px;
+        
+        background-image: url('../img/icon-mail.svg');
+      }
+    }
 
   &__user-phone-email {
     display: flex;
@@ -184,22 +234,8 @@
     }
   }
 
-  &__placeholder--tel {
-    & span {
-      top: 50px;
-    }
-  } 
-
-  &__placeholder--email {
-    & span {
-      top: 55px;
-    }  
-  }
-
-  .order-product__email-wrap {
-    & h2 {
-      margin-bottom: 20px;
-    }
+  &__phone-header {
+    margin-bottom: 20px;
   }
 
   &__user-comment {
@@ -207,11 +243,11 @@
     margin-bottom: 57px;
 
 
-    & h2 {
+    &-header {
       margin-bottom: 35px;
     }
 
-    & textarea {
+    &-textarea {
       box-sizing: border-box;
       padding: 10px;
       resize: none;
@@ -225,19 +261,6 @@
         border-color: @mentholColor;
       }
     }
-
-    & textarea:focus + .order-product__textarea-placeholder {
-      display: none;
-    }
-  }
-
-  &__textarea-placeholder {
-    .formPlaceholderText;
-    position: absolute;
-    z-index: -1;
-    width: 160px;
-    top: 67px;
-    left: 17px;
   }
 }
 
@@ -246,7 +269,21 @@
     width: 100%;
     padding-top: 45px;
 
-    & label {
+    &__type-header,
+    &__color-header,
+    &__user-name-header,
+    &__phone-header,
+    &__email-header,
+    &__user-comment-header {
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+
+    &__type-label,
+    &__color-label,
+    &__user-name-label {
       .formLabelTabletText;
     }
     
@@ -267,7 +304,8 @@
       .alignment;
       margin-bottom: 10px;
 
-      & label {
+      &-label {
+        .formLabelTabletText;
         width: 343px;
         margin-left: 160px;
         margin-bottom: 55px;  
@@ -276,6 +314,7 @@
         &::before {
           width: 50px;
           height: 50px;
+          top: -20px;
           left: 8px;
         }
       }
@@ -287,15 +326,7 @@
         background-repeat: no-repeat;
       }
 
-      & label {
-        .formLabelTabletText;
-
-        &::before {
-          top: -20px;
-        }
-      }
-
-      & h2 {
+      &-header {
         position: absolute;
         top: -18px;
       }
@@ -303,6 +334,24 @@
   
     &__color {
       background-color: @lightGray;
+      
+      &-header {
+        position: absolute;
+        left: 0px;
+        top: 70px;
+      }
+
+      &-label {
+        .formLabelTabletText;
+        box-sizing: border-box;
+        width: 230px;
+        padding-left: 88px;
+
+        &::before {
+          width: 52px;
+          height: 50px;
+        }
+      }
 
       &-wrap {
         position: relative;
@@ -316,24 +365,6 @@
         padding-top: 75px;
         padding-bottom: 20px;
         .alignment;
-
-        & h2 {
-          position: absolute;
-          left: 0px;
-          top: 70px;
-        }
-
-        & label {
-          .formLabelTabletText;
-          box-sizing: border-box;
-          width: 230px;
-          padding-left: 88px;
-
-          &::before {
-            width: 52px;
-            height: 50px;
-          }
-        }
 
         & label:nth-of-type(2n-1) {
           margin-right: 35px;
@@ -352,6 +383,16 @@
     &__user-name {
       margin-bottom: 32px;
 
+      &-header {
+        position: absolute;
+        left: 0px;
+        top: 65px;
+      }
+
+      &-label {
+        margin-right: 25px;
+      }
+
       &-wrap {
         position: relative;
         box-sizing: border-box;
@@ -359,12 +400,6 @@
         .alignment;
         padding-top: 60px;
         padding-left: 160px;
-
-        & h2 {
-          position: absolute;
-          left: 0px;
-          top: 65px;
-        }
       }
     }
   
@@ -378,10 +413,6 @@
       margin-bottom: 25px;
       padding-bottom: 10px;
 
-      & label {
-        margin-right: 25px;
-      }
-
       & input {
         width: 100%;
         margin-top: 0;
@@ -389,25 +420,12 @@
       }
     }
 
-    &__placeholder {
-      .formPlaceholderTabletText;
-      position: absolute;
-      top: -27px;
-      left: 140px;
-      width: 200px;
-      opacity: 1;
-
-      &--email,
-      &--tel {
-        .formLabelTabletText;
-        z-index: 1;
-        top: -45px;
-        left: 180px;
-
-        & span {   
-          color: @darkGray;
-          opacity: 0.4;
-        }
+    &__phone,
+    &__email {
+      &-header {
+        position: absolute;
+        top: -5px;
+        left: 0px;
       }
     }
   
@@ -426,10 +444,9 @@
       .alignment;
       padding-left: 164px;
 
-      & h2 {
-        position: absolute;
-        top: -5px;
-        left: 0px;
+      &::before {
+        right: 25px;
+        top: 5px;
       }
 
       & input {
@@ -438,6 +455,14 @@
         margin-bottom: 35px;
       }
     }
+
+    &__email-wrap {
+      &::before {
+        right: 20px;
+        top: 5px;   
+      }
+    }
+
   
     &__user-comment {
       display: flex;
@@ -447,8 +472,14 @@
       .alignment;
       margin-bottom: 45px;
       padding-top: 64px; 
+      
+      &-header {
+        flex-grow: 0;
+        align-self: flex-start;
+        min-width: 90px;
+      }
 
-      & textarea {
+      &-textarea {
         width: 500px;
         height: 142px;
       }
@@ -468,13 +499,6 @@
       width: 280px;
     }
   
-    &__textarea-placeholder {
-      .formPlaceholderTabletText;
-      position: absolute;
-      width: 400px;
-      top: 80px;
-      left: 190px;
-    }
   }
 }
 
@@ -486,47 +510,46 @@
     &__type {
       width: 1050px;
 
-      & h2 {
+      &-header {
         left: 75px;
       }
 
-      & label {
+      &-label {
         margin-left: 175px;
       }
     }
   
     &__color {
+      &-header {
+        left: 70px;
+      }
+        
+      & label:nth-of-type(2n-1) {
+        margin-right: 20px;
+      }
+
+      &-label {
+        width: 245px;
+        margin-right: 20px;
+      }
+
       &-wrap {
         width: 1050px;
         min-height: 250px;
         padding-left: 180px;
-
-        & h2 {
-          left: 70px;
-        }
-        
-        & label:nth-of-type(2n-1) {
-          margin-right: 20px;
-        }
-
-        & label {
-          width: 245px;
-          margin-right: 20px;
-        }
       }
     }
   
     &__user-name {
+      &-header {
+        top: 70px;
+        left: 70px;
+      }
 
       &-wrap {
         width: 1050px;
         padding-left: 185px;
         padding-right: 150px;
-
-        & h2 {
-          top: 70px;
-          left: 70px;
-        }
       }
     }
     
@@ -536,15 +559,21 @@
       padding-left: 185px;
       padding-right: 150px;
 
-      & h2 {
-        left: 70px;
+      &::before {
+        right: 155px;
       }
     }
 
-    &__placeholder {
-      &--email,
-      &--tel {
-        left: 220px;
+    &__email-wrap {
+      &::before {
+        right: 152px;
+      }
+    }
+
+    &__email,
+    &__phone {
+      &-header {
+        left: 70px;
       }
     }
 
@@ -554,17 +583,13 @@
       margin-bottom: 90px;
       padding-right: 170px;
 
-      & h2 {
+      &-header {
         margin-left: 72px;
       }
 
-      & textarea {
+      &-textarea {
         width: 700px;
       }
-    }
-
-    &__textarea-placeholder {
-      left: 220px;
     }
 
     &__submit-wrap {

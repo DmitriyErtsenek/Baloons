@@ -9,10 +9,20 @@
   cursor: pointer;
   outline: none;
 
+  @keyframes btnColor {
+    0% {
+      background-color: transparent;
+    }
+
+    100% {
+      background-color: @darkGray;
+    }
+  }
+
   &:hover {
     color: @white;
-    background-color: @darkGray;
     border-color: @darkGray;
+    animation: btnColor 0.3s ease-in-out forwards;
   }
 
   &:active {

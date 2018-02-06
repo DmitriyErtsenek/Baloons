@@ -29,21 +29,23 @@ gulp.task('symbols', function() {
 
 
 gulp.task('scripts', function() {
-    return gulp.src([
-        'app/libs/jquery/dist/jquery.min.js',
-        'app/libs/owl.carousel/dist/owl.carousel.min.js'
-    ])
-    .pipe(concat('libs.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('app/js'));
+  return gulp.src([
+    'app/libs/jquery/dist/jquery.min.js',
+    'app/libs/owl.carousel/dist/owl.carousel.min.js'
+  ])
+  .pipe(concat('libs.min.js'))
+  .pipe(uglify())
+  .pipe(gulp.dest('app/js'));
 });
 
-
-gulp.task('css-libs', ['less'], function() {
-    return gulp.src('app/css/libs.css')
-    .pipe(cssnano())
-    .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('app/css'));
+gulp.task('css-libs', function(){
+  return gulp.src([
+    'app/libs/owl.carousel/dist/assets/owl.theme.default.css',
+    'app/libs/owl.carousel/dist/assets/owl.carousel.css'
+    ])
+  .pipe(concat('libs.min.css'))
+  .pipe(cssnano())
+  .pipe(gulp.dest('app/css'));
 });
 
 gulp.task('less', function() {
@@ -108,7 +110,8 @@ gulp.task('build', ['clean', 'img', 'less', 'scripts'], function() {
 
     var buildCss = gulp.src([
         'app/css/main.css',
-        'app/css/libs.min.css'
+        'app/css/libs.min.css',
+        'app/css/normalize.css'
     ])
     .pipe(gulp.dest('dist/css'));
 

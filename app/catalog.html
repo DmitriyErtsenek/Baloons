@@ -9,7 +9,7 @@
 </head>
 <body>
   <header class="header">
-    <nav class="main-nav">
+    <nav class="header__nav main-nav main-nav--noJs">
       <div class="main-nav__logo-desktop">
         <a href="index.html">
           <svg x="0px" y="0px" width="148.051px" height="72.707px" viewBox="0 0 148.051 72.707" enable-background="new 0 0 148.051 72.707" xml:space="preserve">
@@ -104,13 +104,13 @@
       </div>
     </nav>   
   </header>
-  <main>
-    <div class="page-header page-header--catalog">
+  <main class="catalog-page">
+    <div class="catalog-page__header page-header page-header">
       <h1>Каталог товаров</h1>
     </div>
     <div class="pattern pattern--tablet"></div>
-    <div class="product-list">
-      <article class="product">
+    <div class="catalog-page__list">
+      <article class="catalog-page__product product">
         <div class="product__img">
           <picture>
             <source media="(min-width:1150px)"
@@ -133,7 +133,7 @@
           </div>
         </div>
       </article>
-      <article class="product">
+      <article class="catalog-page__product product">
         <div class="product__img">
           <picture>
             <source media="(min-width:1150px)"
@@ -156,7 +156,7 @@
           </div>
         </div>
       </article>
-      <article class="product">
+      <article class="catalog-page__product product">
         <div class="product__img">
           <picture>
             <source media="(min-width:1150px)"
@@ -180,7 +180,7 @@
         </div>
       </article>
     </div>
-    <div class="production-process">
+    <div class="catalog-page__production-process production-process">
       <h2 class="production-process__header">
         Процесс производства
       </h2>
@@ -277,5 +277,8 @@
       </div>
     </div>
   </footer>
+  <script src="js/libs.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script src="js/common.js"></script>
 </body>
 </html>
