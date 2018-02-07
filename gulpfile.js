@@ -31,7 +31,8 @@ gulp.task('symbols', function() {
 gulp.task('scripts', function() {
   return gulp.src([
     'app/libs/jquery/dist/jquery.min.js',
-    'app/libs/owl.carousel/dist/owl.carousel.min.js'
+    'app/libs/owl.carousel/dist/owl.carousel.min.js',
+    'app/libs/jquery-validation/dist/jquery.validate.min.js'
   ])
   .pipe(concat('libs.min.js'))
   .pipe(uglify())

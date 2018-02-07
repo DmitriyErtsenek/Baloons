@@ -8,23 +8,23 @@
     width: 260px;
     .alignment;
   }
+  
+  &__title {
+    .headerText;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  &__footnote {
+    .font(@openSans; 16px; 16px; 700; @mentholColor);
+    text-transform: uppercase;
+  }
 
   &__header {
     width: 260px;
     padding-top: 27px;
     .alignment;
     margin-bottom: 24px;  
-
-    & h2 {
-      .headerText;
-      margin: 0;
-      margin-bottom: 8px;
-    }
-
-    & span {
-      .font(@openSans; 16px; 16px; 700; @mentholColor);
-      text-transform: uppercase;
-    }
   }
 
   &__description {
@@ -82,7 +82,19 @@
     width: 670px;
     margin-bottom: 60px;
     
-  
+    &__title {
+      .headerTabletText;
+      margin: 0;
+    }
+
+    &__footnote {
+      text-align: center;
+      width: 90px;
+      margin-left: auto;
+      margin-right: 30px;
+      padding-top: 12px;
+    }
+
     &__header {
       order: 1;
       display: flex;
@@ -90,19 +102,6 @@
       width: 670px;
       margin-bottom: 50px;
       padding-top: 18px;
-
-      & h2 {
-        .headerTabletText;
-        margin: 0;
-      }
-
-      & span {
-        text-align: center;
-        width: 90px;
-        margin-left: auto;
-        margin-right: 30px;
-        padding-top: 12px;
-      }
     }
   
     &__wrap-description {
@@ -151,21 +150,20 @@
     margin-top: 50px;
     margin-bottom: 72px;
     
+    &__title {
+      order: 2;
+      .headerDesktopText;
+      padding-right: 5px;
+    }
+
+    &__footnote {
+      order: 1;
+      margin-right: 45px;
+    }
+
     &__header {
       position: absolute;
       top: 30px;
-
-      & h2 {
-        order: 2;
-        .headerDesktopText;
-        padding-right: 5px;
-
-      }
-
-      & span {
-        order: 1;
-        margin-right: 45px;
-      }
     }
 
     &__img {
