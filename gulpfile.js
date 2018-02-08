@@ -17,15 +17,15 @@ var gulp         = require('gulp'),
     debug        = require('gulp-debug');
   
 
-gulp.task('symbols', function() {
-  return gulp.src('app/svg/*.svg')
-  .pipe(svgmin())
-  .pipe(svgstore({
-  inlineSvg: true
-  }))
-  .pipe(rename('symbols.svg'))
-  .pipe(gulp.dest('app/img/sprite'));
-});
+// gulp.task('symbols', function() {
+//   return gulp.src('app/svg/*.svg')
+//   .pipe(svgmin())
+//   .pipe(svgstore({
+//   inlineSvg: true
+//   }))
+//   .pipe(rename('symbols.svg'))
+//   .pipe(gulp.dest('app/img/sprite'));
+// });
 
 
 gulp.task('scripts', function() {
